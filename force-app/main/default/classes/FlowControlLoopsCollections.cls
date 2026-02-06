@@ -29,7 +29,11 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {
-        return null; // Replace null with the variable you used to store the result
+        String response = null;
+        if(x>y){
+            response = 'Hello World!';
+        }
+        return response; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -42,7 +46,11 @@ public with sharing class FlowControlLoopsCollections {
      * @return true if the person is eligible to vote, false otherwise.
      */
     public static Boolean votingEligibility(Integer age) {
-        return null; // Replace null with the variable you used to store the result
+        Boolean isEligible = false;
+        if(age >= 18){
+            isEligible = true;
+        }
+        return isEligible; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -57,8 +65,14 @@ public with sharing class FlowControlLoopsCollections {
     public static Integer findMax(Integer num1, Integer num2) {
         // Initialize largestNum as null
         Integer largestNum = null;
-
-        return null; // Replace null with the variable you used to store the result
+        if (num1 == null || num2 == null) {
+            return largestNum;
+        } else if (num1 >= num2) {
+            largestNum = num1;
+        } else {
+            largestNum = num2;
+        }
+        return largestNum; // Replace null with the variable you used to store the result
     }
 
 
@@ -71,7 +85,17 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Positive", "Negative", or "Zero", or null if the number is null.
      */
     public static String checkNumber(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+        String numberType = null;
+        if (a == null) {
+            return null;
+        } else if (a > 0) {
+            numberType = 'Positive';
+        }else if(a < 0){
+            numberType = 'Negative';
+        }else {
+            numberType = 'Zero';
+        }
+        return numberType; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -83,7 +107,15 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Even" or "Odd", or null if the number is null.
      */
     public static String checkEvenOdd(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+        String isEvenOrOdd = null;
+        if (a == null) {
+            return null;
+        }else if(Math.mod(a, 2)==0){
+            isEvenOrOdd = 'Even';
+        }else {
+            isEvenOrOdd = 'Odd';
+        }
+        return isEvenOrOdd; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -94,7 +126,15 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the input is "Empty", "Null", or "Contains Text".
      */
     public static String checkString(String a) {
-        return null; // Replace null with the variable you used to store the result
+        String stringType = null;
+        if (a == null) {
+            stringType = 'Null';
+        }else if(a == ''){
+            stringType = 'Empty';
+        }else if(a != '' && a != null){
+            stringType = 'Contains Text';
+        }
+        return stringType; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -110,7 +150,19 @@ public with sharing class FlowControlLoopsCollections {
      * @return The grade for the given score.
      */
     public static String determineGrade(Integer score) {
-        return null; // Replace null with the variable you used to store the result
+        String grade = null;
+        if (score >= 90) {
+            grade = 'A';
+        } else if (score >= 80) {
+            grade = 'B';
+        } else if (score >= 70) {
+            grade = 'C';
+        } else if(score>= 60){
+            grade = 'D';
+        }else{
+            grade = 'F';
+        }
+        return grade; // Replace null with the variable you used to store the result
     }
 
 
@@ -122,13 +174,14 @@ public with sharing class FlowControlLoopsCollections {
      * @return The sum of all integers up to the limit.
      */
     public static Integer sumUpToLimit(Integer intLimit) {
-        /* 
-         for (){
-            
-         }
-        */
-
-        return null; // Replace null with the variable you used to store the result
+        Integer sum = 0;
+        if(intLimit == null){
+            return null;
+        }
+        for(Integer i = 0; i < intLimit; i++){
+            sum += i;
+        }
+        return sum; // Replace null with the variable you used to store the result
     }
 
     /**
