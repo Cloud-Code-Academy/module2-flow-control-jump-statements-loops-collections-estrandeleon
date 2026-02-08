@@ -425,6 +425,6 @@ public with sharing class FlowControlLoopsCollections {
                 employees.add(s);
             }
         }
-        return employees;        
+        return employees;
     }
 }
